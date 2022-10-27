@@ -17,23 +17,25 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img src=slides.image alt="Spiderman"/>
+                    <img :src="slides[imgAttiva].image" alt="Spiderman"/>
                     <div class="text">
 
-                        <h3>{{slides.title}}</h3>
+                        <h3>
+                            {{slides[imgAttiva].title}}
+                        </h3>
                     
                         <p>
-                            {{slides.text}}
+                            {{slides[imgAttiva].text}}
                         </p>
                     
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="precImg"></div>
+                    <div class="next" @click="proxImg"></div>
                     <div class="thumb active">
-                        <img src="{{slides.image}}" alt="Svezia" />
+                        <img src="img/01.webp" alt="Svezia" />
                     </div>
                     <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
@@ -51,8 +53,9 @@
 
             </div>
         </div>
-
+        
     </main>
+
 
     <!--Script-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
