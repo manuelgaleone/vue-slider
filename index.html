@@ -26,12 +26,12 @@
                     </div>
                 </div>
 
-                <div class="thumbs" :class="active">
+                <div class="thumbs">
                     <div class="prev" @click="precImg"></div>
                     <div class="next" @click="proxImg"></div>
                     
                     <div class="thumbs" >    
-                        <div class="thumb" v-for="(slide, i) in slides" @click="cambiaImg(i)" :class="{active: i === activeSlide}" @click="setSlide(i)">
+                        <div class="thumb" v-for="(slide, i) in slides" @click="cambiaImg(i)" :class="{active: i === imgAttiva}" @click="setSlide(i)">
                             <img :src="slide.image" alt="Lorem">
                         </div>
                     </div>
